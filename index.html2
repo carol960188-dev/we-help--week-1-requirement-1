@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>RWD Assignment (Annotated Version)</title>
+<style>
+/* ===== CSS 變數定義 ===== */
+:root {
+--base: 20px; /* 基準文字大小：要求 20px */
+--gap: 20px; /* 元件間距：要求 spacing 20px */
+--container-w: 1200px; /* 主內容固定寬度 */
+--bar-h: 140px; /* Bars 高度固定，方便對齊 */
+--block-h: 220px; /* Content Blocks 高度固定 */
+--light-blue: #d6f0ff; /* 歡迎區背景色 */
+--ink: #0f172a; /* 主文字顏色 */
+--muted: #e2e8f0; /* 淺灰邊框色 */
+--overlay: rgba(0,0,0,0.45); /* 半透明底條背景 */
+}
+
+
+/* ===== 全域設定 ===== */
+html { font-size: var(--base); } /* 全站字級基準 20px */
+body {
+margin: 0; /* 移除預設邊距 */
+color: var(--ink); /* 統一字色 */
+font-family: system-ui, sans-serif;
+line-height: 1.5;
+background: #ffffff;
+overflow-x: hidden; /* 不橫向捲動，不超過螢幕寬」 */
+}
+
+
+/* ===== 導覽列 (Navbar) ===== */
+.navbar {
+width: 100%; /* 寬度填滿螢幕，但不超出 */
+border-bottom: 1px solid var(--muted);
+background: #fff; /* 白底*/
+}
+
+
+.nav-inner {
+margin: 0 auto;
+display: flex; /* 使用 flex 對齊左右內容 */
+align-items: center; /* 垂直置中 */
+gap: var(--gap);
+min-height: 72px;
+padding: 0;
+width: 100%; /* 滿版但不溢出 */
+box-sizing: border-box;
+justify-content: space-between; /* 左右兩側對齊 */
+}
+
+
+.brand {
+font-weight: 800; /* 加粗當標題 */
+font-size: 1.15rem;
+}
+
+
+.menu {
+display: flex;
+align-items: center;
+gap: 28px; /* 選單間距 */
+list-style: none; /* 移除項目符號 */
+margin: 0;
+padding: 0;
+}
+
+
+.menu a {
+color: inherit; text-decoration: none;
+}
+
+
+.menu a:hover {
+text-decoration: underline;
+}
+
+
+/* ===== 歡迎區 (Hero) ===== */
+.hero {
+width: 100%; /* 滿版 */
+background: var(--light-blue); /* 淺藍背景 */
+display: grid; /* grid 方便置中 */
+place-items: center; /* 水平＋垂直置中 */
+min-height: 320px;
+text-align: center;
+border-bottom: 1px solid var(--muted);
+}
+
+
+</html>

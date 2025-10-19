@@ -1,1 +1,0 @@
-# we-help--week-1-requirement-1
